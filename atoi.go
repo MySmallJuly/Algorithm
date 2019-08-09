@@ -12,7 +12,7 @@ type back struct {
 	methed func(s string) float64
 }
 func main() {
-	var count string = "-123456"
+	var count string = "12.45"
 	fmt.Printf("转换前 ： %v   ->  %T\n",count,count)
 	result := atoi(count)
 	fmt.Printf("转换后 ： %v   ->  %T\n",result,result)
@@ -63,7 +63,7 @@ func finddpoint(s string) float64{
 }
 
 func finde(s string) float64 {
-	if s[0] == 'e' || s[0] == 'E' || count_e(s) > 1 || s[len(s)-1] == '.'{
+	if s[0] == 'e' || s[0] == 'E' || count_e(s) > 1 || s[len(s)-1] == '.' || s[len(s)-1] == 'e' || s[len(s)-1] == 'E'{
 		log.Printf("字符串格式错误: %s",s)
 		return 0
 	}
